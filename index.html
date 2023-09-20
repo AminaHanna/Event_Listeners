@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Listeners</h1>
+    <button id="button">click Me</button>
+    <button id="btn1">Try it</button>
+    <button id="btn2">click</button>
+    <p id="para"></p>
+    
+    <style>
+        body{
+            text-align: center;
+            background-color: antiquewhite;
+            color: cadetblue;
+        }
+        button{
+            background-color: transparent;
+            padding: 5px 20px 5px 20px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: rgb(101, 16, 73);
+            color: rgb(242, 240, 239);
+            /* transition: 0.2s; */
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.write(Date())
+        document.getElementById("button").addEventListener("click", function() {
+        alert("Helloooiiii");
+        });
+        document.write("<h3>writing directly into html o/p</h3><p>Here mouse over and mouse out on the same button</p>")
+        
+
+        var x = document.getElementById("btn1");
+        x.addEventListener("mouseover", myFunction);
+        x.addEventListener("mouseout", mySecondFunction);
+        var y = document.getElementById("btn2");
+        y.addEventListener("click",myThirdFunction);
+        
+
+        function myFunction() {
+        document.getElementById("para").innerHTML = "Mouse over!<br>";
+        }
+
+        function mySecondFunction() {
+        document.getElementById("para").innerHTML = "Mouse out!<br>";
+        }
+
+        function myThirdFunction() {
+        document.getElementById("para").innerHTML = "Clicked!<br>";
+        }
+    </script>
+</body>
+</html>
